@@ -1,0 +1,33 @@
+.floating-label-group {
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.floating-label-group .floating-label {
+    font-size: 16px;
+    color: #2874f0;
+    position: absolute;
+    pointer-events: none;
+    top: 9px;
+    left: 12px;
+    transition: all 0.1s ease;
+}
+
+.login-cont input{
+    width: 100%;
+    border-bottom: solid 2px #2874f0 !important;
+    border-radius: 0 !important;
+    
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+    top: -24px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 19px;
+    opacity: 1;
+    color: #404040;
+    border: none;
+    outline: none;
+}

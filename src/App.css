@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
+.navbarContainer {
+  font-family: 'Urbanist', sans-serif;
+  background-color: #2874f0;
+  /* height: 45px; */
+  transition: all 0.2s;
+  padding: 7px 0;
+  
+ 
+}
+
+header{
+  z-index: 15554555 !important;
+}
+.nav-cont input{
+  padding: 7px 15px ;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+}
+
+.nav-items ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-items ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.nav-items ul li a:hover{
+  border-bottom: solid 1px white;
+}
+.logo h2{
+  font-weight: bold;
+  color: white;
+}
+
+.nav-cont{
+  display: flex;
+  align-items: center;
+  
+  justify-content: space-between;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  display: none;
+}
+
+ .loginbtn{
+  padding: 5px 20px;
+  background-color: aliceblue;
+  color: #2874f0 !important;
+  font-weight: bold;
+}
+
+.btn{
+  padding: 5px 20px;
+  background-color: aliceblue;
+  color: #efefef !important;
+  font-weight: bold;
+  background-color: #2874f0 !important;
+}
+
+.loginbtn a{
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+}
+
+#menu-icon{
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 5022;
+  display: none;
+}
+
+
+
+@media screen and (max-width: 995px) {
+
+  .nav-items{
+    display: none;
+  }
+
+  .loginbtn{
+    display: flex;
+    order: 3 !important;
+  }
+ 
+  .mobile ul{
+    position: absolute;
+    top: 52px;
+    right: 0%;
+    width: 270px;
+    height: 100%;
+    background-color: #2874f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 0 0 0 10px;
+    transition: all 1s;
+  }
+
+  .mobile ul{
+    z-index: 5555555555;
+    list-style: none;
+  }
+
+  .mobile ul li{
+    padding: 10px;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+  }
+
+  .mobile ul li a {
+    text-decoration: none;
+    color: white;
+    /* padding: 20px ; */
+  }
+
+  #menu-icon{
+    display: block;
+  }
+  .main{
+    display: block;
+  }
+
+  
+  
+  
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+/* HOMEPAGE */
+.top-category{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.category{
+  box-shadow: 0px 15px 10px -15px rgba(0,0,0,0.5) !important;
+  font-family:Roboto, Arial, sans-serif;
+}
+
+
+.top-category img{
+  width: 100%;
+}
+
+.top-category p{
+  font-size: 10px;
+  font-weight: bold;
+  
+}
+
+@media screen and (min-width: 768px){
+  .top-category p{
+    font-size: 14px;
+    font-weight: bold;
+    
+  }
+ 
+  .top-category{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* COMMON */
+
+.react-multi-carousel-track{
+  gap: 10px !important;
+}
+
+.common-file{
+  box-shadow: 
+   0px 11px 8px -10px #CCC,
+   0px -11px 8px -10px #CCC; 
+}
+
+.react-multiple-carousel__arrow--right{
+  right: 0 !important;
+}
+.react-multiple-carousel__arrow--left{
+  left: 0 !important;
+}
+
+
+.btn-warning{
+  background-color: #ffc107 !important;
+  color: black !important;
+}

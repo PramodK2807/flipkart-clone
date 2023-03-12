@@ -1,0 +1,24 @@
+i{
+    font-size: 25px;
+    cursor:  pointer !important;
+  }
+  
+
+  .active{
+    color: green;
+    font-size: 18px;
+  }
+  
+  .stock{
+   
+    text-align: center;
+    border: solid 1 px rgb(151, 20, 20) !important;;
+  }
+  .out-of-stock{
+    color:red !important;
+  }
+  
+  .stock button{
+    
+    margin-top: 20px;
+  }

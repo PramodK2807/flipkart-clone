@@ -1,0 +1,53 @@
+.cart-shadow{
+    box-shadow: 0 0 2px rgba(0,0,0,.12);
+}
+body{
+    background-color: #f1f3f6 !important;
+}
+
+.total .row div{
+   line-height: 1.4 !important;
+   font-size: 18px;
+
+}
+
+.pay:hover{
+    background-color: #2874f0 !important;
+    color: white !important;;
+    transition: all 0.5s;
+}
+
+.function-btn button{
+    height: 35px !important;
+    width: 35px !important;
+    text-align: center;
+    font-size: 25px !important;
+    background-color: white;
+    font-weight: bolder;
+    border: none !important;
+    border-radius: 50% !important;
+
+}
+
+.function-btn{
+    /* border: 1px solid green !important; */
+    justify-content: flex-end !important;
+    display: flex !important;
+}
+
+
+@media screen and (max-width:768px) {
+    .cart-container .row{
+        --bs-gutter-x: 0 !important;
+    }
+    .cart-container .onmobile{
+        display: none !important;
+    }
+    .total{
+        padding: 15px 10px;
+    }
+    .fa-arrow-left{
+        display: none;
+    }
+}
+
