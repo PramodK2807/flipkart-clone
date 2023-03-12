@@ -1,24 +1,25 @@
 import React from "react";
-
+import img from '../image/loading-gif.gif'
 
 const Loader = () => {
 
   
   return (
     <>
+      <div style={{display:'flex', alignItems:"center", justifyContent:'center'}}>
       <img
         style={{
-          display: "block",
-          height: "50%",
+            width:"100%",
+         
           marginLeft: "auto",
           marginRight: "auto",
-          margin: "auto",
-          width: "50%",
+     
         }}
-        src="https://tbphelps.com/skin/frontend/ultimo/default/images/wating.gif"
+        src={img}
         alt="loading"
         className="img-fluid"
       />
+      </div>
       
     </>
   );

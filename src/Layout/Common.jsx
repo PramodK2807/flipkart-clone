@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { NavLink } from "react-router-dom";
+import Loader2 from "../pages/Loader2";
 
 const Common = ({deals, title}) => {
 
@@ -40,6 +41,7 @@ const Common = ({deals, title}) => {
             >
 
 {
+  deals.length > 0 ? (
   deals.map((d) => (
     <NavLink className="my-2 card py-2" key='d._id'  to={`products/${d.category}`}>
       <img  style={{height:"160px", padding:"10px"}}  src={d.image} alt="i" />
@@ -48,6 +50,9 @@ const Common = ({deals, title}) => {
       <p style={{color:"#212121", opacity:'0.7'}} className="text-center m-0 py-1">{d.model_name}</p>
     </NavLink>
   ))
+  )
+  :
+  (<Loader2/>)
 }
 
 </Carousel>

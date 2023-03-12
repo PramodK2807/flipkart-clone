@@ -6,6 +6,7 @@ import {Button, Col, ListGroupItem, Row} from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useCart } from "../Context/CartContext";
 import { useAuth } from "../Context/AuthContext";
+import Loader from "./Loader";
 
 const ProductsOnCategory = () => {
 
@@ -45,7 +46,8 @@ const ProductsOnCategory = () => {
           onClick={() => navigate(-1)}
         />
         <div className="row">
-          {catProducts.map((p) => (
+          {catProducts.length > 0 ? (
+            catProducts.map((p) => (
             <>
             
               <Row className="my-5" >
@@ -114,8 +116,13 @@ const ProductsOnCategory = () => {
               </Row>
               <hr />
             </>
-          ))}
+          ))
+          ) :(<Loader/>)
+         
+}
 
+
+          
           
         </div>
       </div>

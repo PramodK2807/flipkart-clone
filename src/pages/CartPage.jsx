@@ -190,14 +190,14 @@ const CartPage = () => {
                     
                     <div className="row justify-content-between " style={{fontSize:'15px', color:"green"}}>
                         <div className="col-8">Delivery Charges</div>
-                        <div className="col-4">{payable > 499 ? "Free" : '₹ 40' }</div>
+                        <div className="col-4">{cart.length > 0 ? payable > 499 ? "Free" : '₹ 40' : 0 }</div>
                     </div>
                     <hr />
 
 
                     <div className="row justify-content-between fw-bold fs-5">
                         <div className="col-8 ">Total Price </div>
-                        <div className="col-4">₹ {payable}</div>
+                        <div className="col-4">₹ {cart.length > 0 ? payable : 0}</div>
                     </div>
 
                     <hr />
