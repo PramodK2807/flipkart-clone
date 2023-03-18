@@ -89,7 +89,7 @@ const Register = () => {
                          </div>
 
                         <div className="floating-label-group">
-                            <input type="number" value={mobile} onChange={(e) => setMobile(e.target.value)} id="mobile" autoComplete="off" autoFocus required />
+                            <input type="number" maxLength="10" value={mobile} onChange={(e) => setMobile(e.target.value)} id="mobile" autoComplete="off" autoFocus required />
                             <label className="floating-label"> Phone Number </label>
                          </div>
 

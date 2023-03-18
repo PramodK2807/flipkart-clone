@@ -60,28 +60,10 @@ const CartPage = () => {
         setPayable(paying)
     }
 
-    
-
-    // const increment = (id) => {
-    //     // console.log(id)
-    //     cart.map((cartItem) => {
-    //         if(cartItem.id === id) {
-    //             setQty(qty+1)
-    //         }
-    //     })
+    const increment = () => {
         
-    // }
-
-    // const decrement = (id) => {
-    //     cart.map((cartItem) => {
-    //         if(cartItem._id === id){
-    //             setQty(qty > 1 ? qty - 1 : 1)
-    //         }
-    //         else(
-    //             setQty(qty)
-    //         )
-    //     })
-    // }
+        setQty(qty+1)
+    }
 
     useEffect(() => {
         totalPrice()
@@ -145,15 +127,15 @@ const CartPage = () => {
                         </div>
 
                         <div className="row align-items-center justify-content-between">
-                            {/* <div className="col-6 function-btn ">
+                            <div className="col-6 function-btn ">
                                 <div className="row align-items-center">
-                                <button className="col-4" onClick={() => decrement(cart._id)}><i className="fa-solid fa-minus"></i></button>
+                                {/* <button className="col-4" onClick={() => decrement(cart._id)}><i className="fa-solid fa-minus"></i></button> */}
 
                                 <button className="col-4" style={{fontWeight:'400', fontSize:'16px'}}>{qty}</button>
 
-                                <button className="col-4" onClick={() => increment(cart._id)}><i className="fa-solid fa-plus"></i></button>
+                                <button className="col-4" onClick={() => increment}><i className="fa-solid fa-plus"></i></button>
                                 </div>
-                            </div> */}
+                            </div>
                             <div className="col-12 d-flex justify-content-end">
                                 <button onClick={() => removeCartItem(cart._id)} className="px-3 py-2" style={{border:"none", background:'#f1c40f'}}>Remove</button>
                             </div>

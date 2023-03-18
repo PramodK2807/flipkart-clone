@@ -57,7 +57,6 @@ const Header = () => {
           style={{ position: "relative" }}
         >
 
-          {/* <Searc/> */}
           <input
             style={{ width: "100%" }}
             type="text"

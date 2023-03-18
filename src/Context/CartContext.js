@@ -5,8 +5,6 @@ const CartContext = createContext()
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
-    console.log(cart)
-
     useEffect(() => {
         let localItem = localStorage.getItem('cart')
         if(localItem){

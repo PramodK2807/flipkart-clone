@@ -15,10 +15,11 @@ const Login = () => {
   
 useEffect(()=>{
 
-}, [navigate, auth])
+}, [auth])
 
 
   const loginHandle = async(e) => {
+    e.preventDefault()
     if(!email || !password){
       setError(true)
       toast.error("Please enter email and password")
@@ -48,7 +49,7 @@ useEffect(()=>{
           token:res.token
       })
       localStorage.setItem('auth', JSON.stringify(res))
-      navigate('/')
+      // navigate('/')
     }
     else{
       toast.error(res.message)

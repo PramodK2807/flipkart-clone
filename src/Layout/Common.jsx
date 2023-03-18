@@ -36,9 +36,7 @@ const Common = ({deals, title}) => {
             <Carousel responsive={responsive}
              removeArrowOnDeviceType={["tablet", "mobile"]}
              containerClass="none"
-             itemClass="carousel-item-padding-10-px"
-             
-            >
+             itemClass="carousel-item-padding-10-px">
 
 {
   deals.length > 0 ? (
