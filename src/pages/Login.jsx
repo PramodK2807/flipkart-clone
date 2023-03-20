@@ -15,7 +15,7 @@ const Login = () => {
   
 useEffect(()=>{
 
-}, [auth])
+}, [navigate, auth])
 
 
   const loginHandle = async(e) => {
@@ -39,9 +39,10 @@ useEffect(()=>{
     })
 
     let res = await result.json()
-    console.log(res)
+    // console.log(res)
     
     if(res.success){
+      
       toast.success(res.message)
       setAuth({
         ...auth,
@@ -49,7 +50,7 @@ useEffect(()=>{
           token:res.token
       })
       localStorage.setItem('auth', JSON.stringify(res))
-      // navigate('/')
+      navigate('/')
     }
     else{
       toast.error(res.message)
@@ -66,7 +67,7 @@ useEffect(()=>{
   return (
     <>
         <div
-        style={{position:'absolute'}}
+        style={{position:'absolute', zIndex:'5555555555'}}
           className="modal fade my-auto"
           id="login"
           aria-labelledby="loginLabel"
@@ -87,19 +88,20 @@ useEffect(()=>{
               <div className="modal-body">
                     <div className="login-cont">
                         <div className="floating-label-group">
-                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value) }  id="email" autoComplete="off" autoFocus required />
+                            <input type="email"
+                            name='email' value={email} onChange={(e) => setEmail(e.target.value) }  id="email"  autoFocus required />
                             <label className="floating-label">Enter Email</label>
                          </div>
 
                         <div className="floating-label-group">
-                            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}  autoComplete="off" autoFocus required />
+                            <input type="password" name='password' id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             <label className="floating-label">Enter Password</label>
                          </div>
 
                          
                     </div>
 
-                    <button className="btn" onClick={loginHandle}>LOGIN</button>
+                    <button className="btn" type="submit" onClick={(e) => loginHandle(e)}>LOGIN</button>
 
                     <div className="mt-2">
                         <p>New user at Flipkart <NavLink type="button"

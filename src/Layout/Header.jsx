@@ -13,6 +13,7 @@ const Header = () => {
   const [auth, setAuth] = useAuth()
   const [cart, setCart] = useCart([])
   const [search, setSearch] = useSearch()
+  const [hide, setHide] = useState(true)
   const navigate = useNavigate()
 
   const searchPro = async(e) => {

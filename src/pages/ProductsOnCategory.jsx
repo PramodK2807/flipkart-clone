@@ -26,7 +26,27 @@ const ProductsOnCategory = () => {
     }
   }
 
-  // console.log(catProducts);
+  const addToCart = async(product) => {
+    const exist = await cart.find(p => p._id === product._id)
+    if(!exist){
+      // console.log(product);
+      localStorage.setItem("cart", JSON.stringify([...cart, product ]))
+      setCart([...cart, product])
+      toast.success("Item added in Cart successfully")
+    }
+
+    else{
+      // const newCart = cart.map((item) => 
+      // item._id === product._id ? {...exist, } : item
+      // );
+      // setCart([...cart, newCart])
+
+      toast.error("Item already in Cart")
+    }
+  
+   
+  }
+
   useEffect(() => {
     getCatProducts()
   }, [])
@@ -45,13 +65,13 @@ const ProductsOnCategory = () => {
           style={{ cursor: "pointer" }}
           onClick={() => navigate(-1)}
         />
-        <div className="row">
+        <div className="row ">
           {catProducts.length > 0 ? (
             catProducts.map((p) => (
             <>
             
-              <Row className="my-5" >
-              <div className="col-md-3 " >
+              <Row className="my-5 " >
+              <div className="col-md-3 col-6 " style={{margin:"auto"}} >
                 <img style={{ width: "100%" }} src={p.img} alt="s" />
               </div>
               <div className="col-md-6">
@@ -96,9 +116,11 @@ const ProductsOnCategory = () => {
                     type="button"
                     style={{padding:'5px '}}
                     // disabled={!auth?.token }
-                    onClick={() => {setCart([...cart, p])
-                      localStorage.setItem('cart', JSON.stringify([...cart, p]))
-                    toast.success("Item Added To Cart")}}
+
+                    onClick={() => addToCart(p)}
+                    // onClick={() => {setCart([...cart, p])
+                    //   localStorage.setItem('cart', JSON.stringify([...cart, p]))
+                    // toast.success("Item Added To Cart")}}
                   >
                     Add to cart
                   </Button>

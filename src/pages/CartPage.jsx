@@ -15,8 +15,7 @@ const CartPage = () => {
     const [ delivery, setDelivery ] = useState(40)
     const navigate = useNavigate()
     const location = useLocation()
-    // console.log(cart);
-
+    
     const removeCartItem = (itemId) => {
         console.log(itemId)
         try {
@@ -37,7 +36,7 @@ const CartPage = () => {
         let price = 0;
         cart?.map((cartItem) => {
             price = price + cartItem.price *qty
-            // console.log(cartItem.price)
+            
         })
         setGrandTotal(price)
     }
@@ -60,10 +59,7 @@ const CartPage = () => {
         setPayable(paying)
     }
 
-    const increment = () => {
-        
-        setQty(qty+1)
-    }
+  
 
     useEffect(() => {
         totalPrice()
@@ -102,12 +98,12 @@ const CartPage = () => {
                         cart?.length > 0 ? cart.map((cart) => (
 <>
                         <div key={cart._id} className="row cart-shadow align-items-center justify-content-between p-3"  style={{background:"white"}}>
-                        <div className="col-2">
+                        <div className="col-3 col-md-2">
                             <img style={{width:"100%"}} src={cart.img} alt="" />
                             
                         </div>
                         <div className="col-6">
-                            <p className="fw-bold fs-5 text-center">{cart.name}</p>
+                            <p className="fw-bold fs-5 ">{cart.name}</p>
                            
                             {
                                 cart.offer ? (<>
@@ -127,16 +123,16 @@ const CartPage = () => {
                         </div>
 
                         <div className="row align-items-center justify-content-between">
-                            <div className="col-6 function-btn ">
-                                <div className="row align-items-center">
-                                {/* <button className="col-4" onClick={() => decrement(cart._id)}><i className="fa-solid fa-minus"></i></button> */}
+                            {/* <div className=" function-btn ">
+                                <div className="">
+                                <button className="col-4"><i className="fa-solid fa-minus"></i></button>
 
                                 <button className="col-4" style={{fontWeight:'400', fontSize:'16px'}}>{qty}</button>
 
-                                <button className="col-4" onClick={() => increment}><i className="fa-solid fa-plus"></i></button>
+                                <button className="col-4" onClick={() => increment(cart)}><i className="fa-solid fa-plus"></i></button>
                                 </div>
-                            </div>
-                            <div className="col-12 d-flex justify-content-end">
+                            </div> */}
+                            <div className="col-12 justify-content-end">
                                 <button onClick={() => removeCartItem(cart._id)} className="px-3 py-2" style={{border:"none", background:'#f1c40f'}}>Remove</button>
                             </div>
                         

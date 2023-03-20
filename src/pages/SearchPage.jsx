@@ -28,7 +28,7 @@ const SearchPage = () => {
       <>
       
         <Row className="my-5" key={p._id}>
-        <div className="col-md-3 " >
+        <div className="col-md-3 col-6" style={{margin:"10px auto"}} >
           <img style={{ width: "100%" }} src={p.img} alt="s" />
         </div>
         <div className="col-md-6">
