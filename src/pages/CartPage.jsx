@@ -59,6 +59,14 @@ const CartPage = () => {
         setPayable(paying)
     }
 
+    const decrement = () => {
+        if(qty === 1){
+            setQty(qty)
+        }
+        else{
+            setQty(qty - 1)
+        }
+    }
   
 
     useEffect(() => {
@@ -122,17 +130,17 @@ const CartPage = () => {
                             
                         </div>
 
-                        <div className="row align-items-center justify-content-between">
-                            {/* <div className=" function-btn ">
-                                <div className="">
-                                <button className="col-4"><i className="fa-solid fa-minus"></i></button>
+                        <div className=" d-flex justify-content-between">
+                            <div className=" function-btn ">
+                                {/* <div className="row border ">
+                                <button onClick={() => decrement()} className="col-4"><i className="fa-solid fa-minus"></i></button>
 
                                 <button className="col-4" style={{fontWeight:'400', fontSize:'16px'}}>{qty}</button>
 
-                                <button className="col-4" onClick={() => increment(cart)}><i className="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div> */}
-                            <div className="col-6 justify-content-end">
+                                <button onClick={() => setQty(qty+1)} className="col-4"><i className="fa-solid fa-plus"></i></button>
+                                </div> */}
+                            </div>
+                            <div >
                                 <button onClick={() => removeCartItem(cart._id)} className="px-3 py-2" style={{border:"none", background:'#f1c40f'}}>Remove</button>
                             </div>
                         
