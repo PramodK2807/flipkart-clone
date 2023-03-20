@@ -41,9 +41,7 @@ ul {
   margin: 0 10px;
 }
 
-.nav-items ul li a:hover{
-  border-bottom: solid 1px white;
-}
+
 .logo h2{
   font-weight: bold;
   color: white;

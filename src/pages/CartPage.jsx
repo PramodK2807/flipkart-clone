@@ -132,7 +132,7 @@ const CartPage = () => {
                                 <button className="col-4" onClick={() => increment(cart)}><i className="fa-solid fa-plus"></i></button>
                                 </div>
                             </div> */}
-                            <div className="col-12 justify-content-end">
+                            <div className="col-6 justify-content-end">
                                 <button onClick={() => removeCartItem(cart._id)} className="px-3 py-2" style={{border:"none", background:'#f1c40f'}}>Remove</button>
                             </div>
                         
